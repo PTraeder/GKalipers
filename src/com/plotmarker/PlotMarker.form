@@ -10,17 +10,6 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="e1dbd" class="com.plotmarker.ImagePanel" binding="imagePanel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties>
-          <autoscrolls value="false"/>
-          <minimumSize width="-1" height="-1"/>
-          <preferredSize width="-1" height="-1"/>
-        </properties>
-      </component>
       <component id="56450" class="javax.swing.JButton" binding="buttonOpen">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -30,6 +19,17 @@
         </constraints>
         <properties>
           <text value="Open File"/>
+        </properties>
+      </component>
+      <component id="e1dbd" class="com.plotmarker.ImagePanel" binding="imagePanel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <minimumSize width="-1" height="-1"/>
+          <preferredSize width="-1" height="-1"/>
         </properties>
       </component>
     </children>

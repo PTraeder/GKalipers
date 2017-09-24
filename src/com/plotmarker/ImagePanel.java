@@ -16,7 +16,7 @@ public class ImagePanel extends JPanel{
 
   public void setMarkerLeft(int markerLeft) {
     this.markerLeft = markerLeft;
-    markerMiddle = (markerLeft+markerRight)/2;
+    markerMiddle = Math.abs(markerLeft+markerRight)/2;
   }
 
   public int getMarkerRight() {
@@ -25,7 +25,7 @@ public class ImagePanel extends JPanel{
 
   public void setMarkerRight(int markerRight) {
     this.markerRight = markerRight;
-    markerMiddle = (markerLeft+markerRight)/2;
+    markerMiddle = Math.abs(markerLeft+markerRight)/2;
   }
 
   public void setScaleLeft(int scaleLeft) {
@@ -72,7 +72,7 @@ public class ImagePanel extends JPanel{
   }
 
   private String getCaliperLabelText(){
-    return String.format("%.0f",1000*((markerRight-markerLeft)/ (float)(scaleRight-scaleLeft)))+" ms";
+    return String.format("%.0f",1000*(Math.abs(markerRight-markerLeft)/ (float)Math.abs(scaleRight-scaleLeft)))+" ms";
   }
 
   public void loadImage(File imageSource){

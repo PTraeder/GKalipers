@@ -5,11 +5,11 @@ import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.util.Optional;
 
-import javax.swing.JFileChooser;
+import javax.swing.*;
 
 public class OpenDialog {
 
-  public Optional<File> open() {
+  public Optional<File> open(JFrame parent) {
     final JFileChooser chooser = new JFileChooser("Choose File");
     chooser.setDialogType(JFileChooser.OPEN_DIALOG);
     chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
@@ -27,7 +27,7 @@ public class OpenDialog {
     });
 
     chooser.setVisible(true);
-    final int result = chooser.showOpenDialog(null);
+    final int result = chooser.showOpenDialog(parent);
 
     if (result == JFileChooser.APPROVE_OPTION) {
       File inputFolderFile = chooser.getSelectedFile();
